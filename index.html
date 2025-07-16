@@ -54,6 +54,23 @@
                     <p data-translate="service3-desc">Fleksibel tolketjeneste via telefon eller videokonferanse</p>
                 </div>
             </div>
+            <!-- Add this after the services-grid div in the services section -->
+            <div class="translation-tool">
+                <h3 data-translate="translator-title">Quick Translation Tool</h3>
+                <div class="translator-container">
+                    <div class="input-group">
+                        <textarea id="sourceText" placeholder="Enter text to translate" data-translate="translator-placeholder"></textarea>
+                        <select id="targetLang">
+                            <option value="no" data-translate="translator-to-norwegian">Translate to Norwegian</option>
+                            <option value="ur" data-translate="translator-to-urdu">Translate to Urdu</option>
+                        </select>
+                        <button onclick="translateText()" data-translate="translator-button">Translate</button>
+                    </div>
+                    <div class="output-group">
+                        <textarea id="translatedText" readonly data-translate="translator-result-placeholder"></textarea>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="about">
