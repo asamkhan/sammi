@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f5f6fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.language-selector button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border: none;
+    background: var(--light-bg);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.language-selector button.active {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
+                url('hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+}
+
+.services, .about, .contact {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #2980b9;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+    }
+
+    .nav-links a {
+        margin: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
